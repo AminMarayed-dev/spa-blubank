@@ -1,104 +1,199 @@
 import { El } from "./shared/El.js";
 
 export function App() {
-    return El({
-        element:'nav',
-        children:[
-            El({
-                element:'img',
-                className:'hidden'
-            }),
-            El({
-                element:'i',
-                className:'hidden fa-solid fa-bars'
-            }),
-            El({
-                element:'div',
-                className:'backdrop-brightness-50 w-screen h-screen fixed top-0'
-            }),
-            El({
-                element:'div',
-                className:'z-10 relative bg-slate-200 py-4 px-16 h-screen',
-                children:[
-                    El({
-                        element:'div',
-                        className:"text-left text-3xl",
-                        children:[
-                            El({
-                                element:'i',
-                                className:'fa-solid fa-xmark cursor-pointer'
-                            }),
-                        ]
-                    }),
-                    El({
-                        element:'ul',
-                        className:'flex flex-col gap-y-3',
-                        children:[
-                            El({
-                                element:'li',
-                                className:"hover:text-blue-400 cursor-pointer",
-                                innerHTML:'درباره ما'
-                            }),
-                            El({
-                                element:'li',
-                                className:"hover:text-blue-400 cursor-pointer",
-                                innerHTML:'بلاگ'
-                            }),
-                            El({
-                                element:'li',
-                                className:"hover:text-blue-400 cursor-pointer",
-                                innerHTML:'سوالات متداول'
-                            }),
-                            El({
-                                element:'li',
-                                className:"hover:text-blue-400 cursor-pointer",
-                                innerHTML:'موقعیت شغلی'
-                            }),
-                            El({
-                                element:'li',
-                                className:"hover:text-blue-400 cursor-pointer",
-                                innerHTML:'بلوجونیور'
-                            })
-                        ]
-                    }),
-                    El({
-                        element:'div',
-                        className:'flex justify-center items-center gap-3 mt-20',
-                        children:[
-                            El({
-                                element:'span',
-                                className:'text-lg bg-slate-500 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-blue-500',
-                                children:[
-                                    El({
-                                        element:'i',
-                                        className:'fa-brands fa-twitter'
-                                    })
-                                ]
-                            }),
-                            El({
-                                element:'span',
-                                className:'text-lg bg-slate-500 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-blue-500',
-                                children:[
-                                    El({
-                                        element:'i',
-                                        className:'fa-brands fa-instagram'
-                                    })
-                                ]
-                            }),
-                            El({
-                                element:'span',
-                                className:'text-lg bg-slate-500 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-blue-500',
-                                children:[
-                                    El({
-                                        element:'i',
-                                        className:'fa-brands fa-linkedin'
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    })
+  return El({
+    element: "section",
+    children: [
+      El({
+        element: "nav",
+        className:
+          "flex flex-row-reverse  items-center justify-between px-4 py-6 shadow-lg sticky top-0 md:px-0 md:justify-around",
+        children: [
+          El({
+            element: "img",
+            className: "w-16 h-16",
+            src: "./src/assets/image/blu-logo.png",
+          }),
+          El({
+            element: "i",
+            className: "fa-solid fa-bars text-2xl cursor-pointer md:hidden",
+          }),
+          El({
+            element: "ul",
+            className: "hidden  md:flex md:gap-10 md:ml-16",
+            children: [
+              El({
+                element: "li",
+                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "درباره ما",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "بلاگ",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "سوالات متداول",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "موقعیت شغلی",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "بلوجونیور",
+                  }),
+                ],
+              }),
+            ],
+          }),
+          El({
+            element: "a",
+            className:
+              "hidden md:block bg-blue-500 text-white p-3 rounded-2xl cursor-pointer",
+            innerHTML: "باز کردن حساب بلو",
+          }),
+        ],
+      }),
+      El({
+        element: "div",
+        className:
+          "z-10 absolute top-0 bg-slate-200 py-4 px-16 h-screen w-screen hidden",
+        children: [
+          El({
+            element: "div",
+            className: "text-left text-3xl",
+            children: [
+              El({
+                element: "i",
+                className: "fa-solid fa-xmark cursor-pointer",
+              }),
+            ],
+          }),
+          El({
+            element: "ul",
+            className: "flex flex-col gap-y-3",
+            children: [
+              El({
+                element: "li",
+                className: "hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "درباره ما",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "بلاگ",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "سوالات متداول",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "موقعیت شغلی",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
+                    innerHTML: "بلوجونیور",
+                  }),
+                ],
+              }),
+            ],
+          }),
+          El({
+            element: "div",
+            className: "flex justify-center items-center gap-3 mt-20",
+            children: [
+              El({
+                element: "span",
+                className:
+                  "text-lg bg-slate-500 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-blue-500",
+                children: [
+                  El({
+                    element: "i",
+                    className: "fa-brands fa-twitter",
+                  }),
+                ],
+              }),
+              El({
+                element: "span",
+                className:
+                  "text-lg bg-slate-500 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-blue-500",
+                children: [
+                  El({
+                    element: "i",
+                    className: "fa-brands fa-instagram",
+                  }),
+                ],
+              }),
+              El({
+                element: "span",
+                className:
+                  "text-lg bg-slate-500 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-blue-500",
+                children: [
+                  El({
+                    element: "i",
+                    className: "fa-brands fa-linkedin",
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
 }
