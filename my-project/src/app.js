@@ -1,4 +1,5 @@
 import { El } from "./shared/El.js";
+import { showModal, closeModal } from "./js/modal.js";
 
 export function App() {
   return El({
@@ -17,6 +18,12 @@ export function App() {
           El({
             element: "i",
             className: "fa-solid fa-bars text-2xl cursor-pointer md:hidden",
+            eventListener: [
+              {
+                event: "click",
+                callback: showModal,
+              },
+            ],
           }),
           El({
             element: "ul",
@@ -86,6 +93,7 @@ export function App() {
         element: "div",
         className:
           "z-10 absolute top-0 bg-slate-200 py-4 px-16 h-screen w-screen hidden",
+        id: "modal",
         children: [
           El({
             element: "div",
@@ -94,6 +102,12 @@ export function App() {
               El({
                 element: "i",
                 className: "fa-solid fa-xmark cursor-pointer",
+                eventListener: [
+                  {
+                    event: "click",
+                    callback: closeModal,
+                  },
+                ],
               }),
             ],
           }),
