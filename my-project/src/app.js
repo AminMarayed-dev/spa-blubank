@@ -1,4 +1,5 @@
 import { El } from "./shared/El.js";
+import { showModal, closeModal } from "./js/modal.js";
 
 export function App() {
   return El({
@@ -17,6 +18,12 @@ export function App() {
           El({
             element: "i",
             className: "fa-solid fa-bars text-2xl cursor-pointer md:hidden",
+            eventListener: [
+              {
+                event: "click",
+                callback: showModal,
+              },
+            ],
           }),
           El({
             element: "ul",
@@ -28,7 +35,21 @@ export function App() {
                 children: [
                   El({
                     element: "a",
+                    innerHTML: "خانه",
+                    href: "/",
+                    id: "link",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
                     innerHTML: "درباره ما",
+                    href: "/about",
+                    id: "link",
                   }),
                 ],
               }),
@@ -39,6 +60,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "بلاگ",
+                    href: "/blog",
+                    id: "link",
                   }),
                 ],
               }),
@@ -49,6 +72,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "سوالات متداول",
+                    href: "/question",
+                    id: "link",
                   }),
                 ],
               }),
@@ -59,16 +84,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "موقعیت شغلی",
-                  }),
-                ],
-              }),
-              El({
-                element: "li",
-                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
-                children: [
-                  El({
-                    element: "a",
-                    innerHTML: "بلوجونیور",
+                    href: "/job",
+                    id: "link",
                   }),
                 ],
               }),
@@ -86,6 +103,7 @@ export function App() {
         element: "div",
         className:
           "z-10 absolute top-0 bg-slate-200 py-4 px-16 h-screen w-screen hidden",
+        id: "modal",
         children: [
           El({
             element: "div",
@@ -94,6 +112,12 @@ export function App() {
               El({
                 element: "i",
                 className: "fa-solid fa-xmark cursor-pointer",
+                eventListener: [
+                  {
+                    event: "click",
+                    callback: closeModal,
+                  },
+                ],
               }),
             ],
           }),
@@ -106,8 +130,34 @@ export function App() {
                 className: "hover:text-blue-400 cursor-pointer",
                 children: [
                   El({
-                    element: "a",
-                    innerHTML: "درباره ما",
+                    element: "li",
+                    className: "hover:text-blue-400 cursor-pointer",
+                    children: [
+                      El({
+                        element: "a",
+                        innerHTML: "خانه",
+                        href: "/",
+                        id: "link",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "li",
+                    className: "hover:text-blue-400 cursor-pointer",
+                    children: [
+                      El({
+                        element: "a",
+                        innerHTML: "درباره ما",
+                        href: "/about",
+                        id: "link",
+                      }),
+                    ],
                   }),
                 ],
               }),
@@ -118,6 +168,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "بلاگ",
+                    href: "/blog",
+                    id: "link",
                   }),
                 ],
               }),
@@ -128,6 +180,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "سوالات متداول",
+                    href: "/question",
+                    id: "link",
                   }),
                 ],
               }),
@@ -138,16 +192,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "موقعیت شغلی",
-                  }),
-                ],
-              }),
-              El({
-                element: "li",
-                className: "hover:text-blue-400 cursor-pointer",
-                children: [
-                  El({
-                    element: "a",
-                    innerHTML: "بلوجونیور",
+                    href: "/job",
+                    id: "link",
                   }),
                 ],
               }),
