@@ -3,6 +3,7 @@ import { App } from "../app.js";
 import { Blog } from "../pages/blog.js";
 import { Question } from "../pages/question.js";
 import { Job } from "../pages/job.js";
+import { notFound } from "../pages/404.js";
 
 export let result = App();
 export function router() {
@@ -44,7 +45,7 @@ export function router() {
     match = {
       route: {
         path: "/not-found",
-        view: () => console.log("not found page"),
+        view: notFound,
       },
       isMatch: true,
     };
