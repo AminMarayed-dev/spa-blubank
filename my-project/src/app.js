@@ -35,7 +35,21 @@ export function App() {
                 children: [
                   El({
                     element: "a",
+                    innerHTML: "خانه",
+                    href: "/",
+                    id: "link",
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "a",
                     innerHTML: "درباره ما",
+                    href: "/about",
+                    id: "link",
                   }),
                 ],
               }),
@@ -46,6 +60,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "بلاگ",
+                    href: "/blog",
+                    id: "link",
                   }),
                 ],
               }),
@@ -56,6 +72,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "سوالات متداول",
+                    href: "/question",
+                    id: "link",
                   }),
                 ],
               }),
@@ -66,16 +84,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "موقعیت شغلی",
-                  }),
-                ],
-              }),
-              El({
-                element: "li",
-                className: "text-gray-500 hover:text-blue-400 cursor-pointer",
-                children: [
-                  El({
-                    element: "a",
-                    innerHTML: "بلوجونیور",
+                    href: "/job",
+                    id: "link",
                   }),
                 ],
               }),
@@ -120,8 +130,34 @@ export function App() {
                 className: "hover:text-blue-400 cursor-pointer",
                 children: [
                   El({
-                    element: "a",
-                    innerHTML: "درباره ما",
+                    element: "li",
+                    className: "hover:text-blue-400 cursor-pointer",
+                    children: [
+                      El({
+                        element: "a",
+                        innerHTML: "خانه",
+                        href: "/",
+                        id: "link",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              El({
+                element: "li",
+                className: "hover:text-blue-400 cursor-pointer",
+                children: [
+                  El({
+                    element: "li",
+                    className: "hover:text-blue-400 cursor-pointer",
+                    children: [
+                      El({
+                        element: "a",
+                        innerHTML: "درباره ما",
+                        href: "/about",
+                        id: "link",
+                      }),
+                    ],
                   }),
                 ],
               }),
@@ -132,6 +168,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "بلاگ",
+                    href: "/blog",
+                    id: "link",
                   }),
                 ],
               }),
@@ -142,6 +180,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "سوالات متداول",
+                    href: "/question",
+                    id: "link",
                   }),
                 ],
               }),
@@ -152,16 +192,8 @@ export function App() {
                   El({
                     element: "a",
                     innerHTML: "موقعیت شغلی",
-                  }),
-                ],
-              }),
-              El({
-                element: "li",
-                className: "hover:text-blue-400 cursor-pointer",
-                children: [
-                  El({
-                    element: "a",
-                    innerHTML: "بلوجونیور",
+                    href: "/job",
+                    id: "link",
                   }),
                 ],
               }),
